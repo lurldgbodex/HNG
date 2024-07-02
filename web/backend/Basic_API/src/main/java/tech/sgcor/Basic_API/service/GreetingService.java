@@ -37,7 +37,7 @@ public class GreetingService {
         double temp = weatherResponse != null ? weatherResponse.getCurrent().getTemp_c(): 0.0;
 
         System.out.println("Temp: " + temp);
-        String greeting = "Hello, " + visitorsName + ",the temperature is " + (int) temp + " degrees Celcius in " + city;
+        String greeting = "Hello, " + visitorsName + "!, the temperature is " + (int) temp + " degrees Celsius in " + city;
         return new GreetingResponse(ipAddress, city, greeting);
     }
 

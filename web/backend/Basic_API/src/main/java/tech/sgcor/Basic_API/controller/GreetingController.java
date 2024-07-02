@@ -18,7 +18,7 @@ public class GreetingController {
         this.greetingService = greetingService;
     }
     @GetMapping()
-    public ResponseEntity<GreetingResponse> sayHello(@RequestParam String visitors_name, HttpServletRequest request) {
-        return ResponseEntity.ok(greetingService.sayHello(visitors_name, request));
+    public ResponseEntity<GreetingResponse> sayHello(@RequestParam String visitor_name, HttpServletRequest request) {
+        return ResponseEntity.ok(greetingService.sayHello(visitor_name, request));
     }
 }
