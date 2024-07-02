@@ -12,10 +12,10 @@ A simple flutter shopping application using static data
 
 ## Screenshots
 
-![Product List](screenshots/screenshot1.jpg)
-![cart](screenshots/screenshot2.jpg)
-![screenshot3](screenshots/screenshot3.jpg)
-![screenshot4](screenshots/screenshot4.jpg)
+<img src="screenshots/screenshot1.jpg" width="200" alt="Product List Page" />
+<img src="screenshots/screenshot2.jpg" width="200" alt="empty cart" />
+<img src="screenshots/screenshot3.jpg" width="200" alt="cart list" />
+<img src="screenshots/screenshot4.jpg" width="200" alt="confirm checkout" />
 
 ## Setup Instructions
 
