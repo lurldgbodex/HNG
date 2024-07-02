@@ -50,7 +50,7 @@ flutter run
 
 ## Download APK
 
-you can download the APK for this application from [here]()
+you can download the APK for this application from [here](https://github.com/lurldgbodex/HNG/releases/download/v1.0.0-beta/app-release.apk)
 
 ## Dependencies
 
