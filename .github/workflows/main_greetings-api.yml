@@ -8,7 +8,7 @@ on:
     branches:
       - main
     paths:
-      - web/backend/Basic_API
+      - web/backend/Basic_API/**
   workflow_dispatch:
 
 jobs:
@@ -24,7 +24,7 @@ jobs:
           java-version: '17'
 
       - name: Build with Maven
-        run: mvn clean install
+        run: mvn clean install --file web/backend/Basic_API/pom.xml
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
@@ -43,7 +43,7 @@ jobs:
   
     steps:
       - name: Download artifact from build job
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifac*-+@v3
         with:
           name: java-app
       
