@@ -26,13 +26,17 @@ public class GreetingService {
 
         // Fetch location from third party api
         String locationUrl = String.format(LOCATION_API_URL, ipAddress);
+        System.out.println("LocationUrl: " + locationUrl);
         LocationResponse location = restTemplate.getForObject(locationUrl, LocationResponse.class);
         String city = location != null ? location.getCity() : "Unknown";
+        System.out.println("Location: " + city);
 
         // Fetch weather from third party api
-        WeatherResponse weatherResponse = restTemplate.getForObject(WEATHER_API_BASE_URL, WeatherResponse.class);
+        String weatherUrl = String.format(WEATHER_API_BASE_URL, city);
+        WeatherResponse weatherResponse = restTemplate.getForObject(weatherUrl, WeatherResponse.class);
         double temp = weatherResponse != null ? weatherResponse.getCurrent().getTemp_c(): 0.0;
 
+        System.out.println("Temp: " + temp);
         String greeting = "Hello, " + visitorsName + ",the temperature is " + (int) temp + " degrees Celcius in " + city;
         return new GreetingResponse(ipAddress, city, greeting);
     }
