@@ -21,7 +21,7 @@ public class GreetingService {
         this.restTemplate = restTemplate;
     }
     public GreetingResponse sayHello(String visitorsName, HttpServletRequest request) {
-        String ipAddress = request.getRemoteAddr();
+        String ipAddress = getClientIp(request);
         System.out.println("IpAddress: " + ipAddress);
 
         // Fetch location from third party api
@@ -30,11 +30,27 @@ public class GreetingService {
         String city = location != null ? location.getCity() : "Unknown";
 
         // Fetch weather from third party api
-//        String weatherUrl = String.format(WEATHER_API_BASE_URL, ipAddress);
         WeatherResponse weatherResponse = restTemplate.getForObject(WEATHER_API_BASE_URL, WeatherResponse.class);
         double temp = weatherResponse != null ? weatherResponse.getCurrent().getTemp_c(): 0.0;
 
         String greeting = "Hello, " + visitorsName + ",the temperature is " + (int) temp + " degrees Celcius in " + city;
         return new GreetingResponse(ipAddress, city, greeting);
+    }
+
+    private String getClientIp(HttpServletRequest request) {
+        String remoteAddress = "";
+
+        if (request != null) {
+            remoteAddress = request.getHeader("X-FORWARDED-FOR");
+            if (remoteAddress == null || remoteAddress.isBlank()) {
+                remoteAddress = request.getRemoteAddr();
+            }
+        }
+
+        if (remoteAddress != null && remoteAddress.contains(":")) {
+            remoteAddress = remoteAddress.split(":")[0];
+        }
+
+        return remoteAddress;
     }
 }
