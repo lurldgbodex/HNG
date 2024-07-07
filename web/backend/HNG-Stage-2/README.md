@@ -298,6 +298,6 @@ mvn test
 
 
 ## Contact
-For questions or suggestions, please contact [your-email@example.com](mailto:your-email@example.com).
+For questions or suggestions, please contact [gbodisegun@gmail.com](mailto:gbodisegun@gmail.com).
 
 ---
