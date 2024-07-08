@@ -16,4 +16,6 @@ COPY --from=build ${EXTRACTED}/spring-boot-loader/ ./
 COPY --from=build ${EXTRACTED}/snapshot-dependencies/ ./
 COPY --from=build ${EXTRACTED}/application/ ./
 
+EXPOSE 8080
+
 ENTRYPOINT ["java", "org.springframework.boot.loader.launch.JarLauncher"]
