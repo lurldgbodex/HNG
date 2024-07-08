@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: tech.sgcor.hng.organisation.service.OrganisationServiceTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.203 s -- in tech.sgcor.hng.organisation.service.OrganisationServiceTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.173 s -- in tech.sgcor.hng.organisation.service.OrganisationServiceTest

@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: tech.sgcor.hng.user.UserIntegrationTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.89 s -- in tech.sgcor.hng.user.UserIntegrationTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 63.16 s -- in tech.sgcor.hng.user.UserIntegrationTest
