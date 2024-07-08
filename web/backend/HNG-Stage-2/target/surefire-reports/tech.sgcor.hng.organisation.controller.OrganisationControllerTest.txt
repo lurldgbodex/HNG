@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: tech.sgcor.hng.organisation.controller.OrganisationControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.281 s -- in tech.sgcor.hng.organisation.controller.OrganisationControllerTest

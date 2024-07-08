@@ -1,0 +1,12 @@
+tech/sgcor/hng/organisation/repository/OrganisationRepositoryTest.class
+tech/sgcor/hng/user/controller/AuthControllerTest.class
+tech/sgcor/hng/user/repository/UserRepositoryTest.class
+tech/sgcor/hng/user/service/AuthServiceTest.class
+tech/sgcor/hng/user/controller/UserControllerTest.class
+tech/sgcor/hng/organisation/service/OrganisationServiceTest.class
+tech/sgcor/hng/config/JwtServiceTest.class
+tech/sgcor/hng/organisation/OrganisationIntegrationTest.class
+tech/sgcor/hng/HngStage2ApplicationTests.class
+tech/sgcor/hng/user/UserIntegrationTest.class
+tech/sgcor/hng/user/service/UserServiceTest.class
+tech/sgcor/hng/organisation/controller/OrganisationControllerTest.class

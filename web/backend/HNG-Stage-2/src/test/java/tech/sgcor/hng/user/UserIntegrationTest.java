@@ -115,7 +115,13 @@ public class UserIntegrationTest {
         assertThat(resBody.data().user()).hasFieldOrPropertyWithValue("phone", request.getPhone());
 
         // verify a default organisation was created
-        ResponseEntity<OrganisationResponse> getResponse = restTemplate.getForEntity("/api/organisations", OrganisationResponse.class);
+        HttpHeaders headers = new HttpHeaders();
+        headers.set("Authorization", "Bearer " + resBody.data().accessToken());
+        HttpEntity<Void> requestEntity = new HttpEntity<>(headers);
+
+        ResponseEntity<OrganisationResponse> getResponse = restTemplate.exchange(
+                "/api/organisations", HttpMethod.GET, requestEntity, OrganisationResponse.class);
+        
         OrganisationResponse getResBody = getResponse.getBody();
 
         assertThat(getResponse.getStatusCode()).isEqualTo(HttpStatus.OK);

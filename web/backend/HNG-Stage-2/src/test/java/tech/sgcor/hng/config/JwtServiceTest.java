@@ -33,7 +33,7 @@ class JwtServiceTest {
     @BeforeEach
     void setUp() {
         String testSecret = "my-very-very-very-very-very-very-secret-key-for-jwt-signing-my-very-secret-key-for-jwt-signing";
-        byte[] keyInBytes = Decoders.BASE64URL.decode(testSecret);
+        byte[] keyInBytes = testSecret.getBytes();
         signingKey = Keys.hmacShaKeyFor(keyInBytes);
         underTest.secret = testSecret;
     }
@@ -55,7 +55,7 @@ class JwtServiceTest {
     }
 
     @Test
-    void shouldValidateToke() {
+    void shouldValidateToken() {
         when(userDetails.getUsername()).thenReturn("test@user.com");
         String token = underTest.generateToken(userDetails);
 

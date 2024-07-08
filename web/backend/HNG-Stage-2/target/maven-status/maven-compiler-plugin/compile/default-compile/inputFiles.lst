@@ -6,7 +6,6 @@
 /home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/main/java/tech/sgcor/hng/exception/BadRequestException.java
 /home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/main/java/tech/sgcor/hng/exception/CustomError.java
 /home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/main/java/tech/sgcor/hng/exception/ForbiddenException.java
-/home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/main/java/tech/sgcor/hng/exception/OrganisationNotFound.java
 /home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/main/java/tech/sgcor/hng/exception/UnauthorizedException.java
 /home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/main/java/tech/sgcor/hng/exception/ValidationException.java
 /home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/main/java/tech/sgcor/hng/exception/ValidationField.java
@@ -15,6 +14,7 @@
 /home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/main/java/tech/sgcor/hng/organisation/dto/request/CreateOrgRequest.java
 /home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/main/java/tech/sgcor/hng/organisation/dto/response/AddToOrgRes.java
 /home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/main/java/tech/sgcor/hng/organisation/dto/response/GetOrganisation.java
+/home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/main/java/tech/sgcor/hng/organisation/dto/response/OrgData.java
 /home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/main/java/tech/sgcor/hng/organisation/dto/response/OrganisationDto.java
 /home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/main/java/tech/sgcor/hng/organisation/dto/response/OrganisationResponse.java
 /home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/main/java/tech/sgcor/hng/organisation/entity/Organisation.java

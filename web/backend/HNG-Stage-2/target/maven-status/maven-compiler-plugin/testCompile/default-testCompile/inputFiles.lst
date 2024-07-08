@@ -1,5 +1,10 @@
 /home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/test/java/tech/sgcor/hng/HngStage2ApplicationTests.java
 /home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/test/java/tech/sgcor/hng/config/JwtServiceTest.java
+/home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/test/java/tech/sgcor/hng/organisation/OrganisationIntegrationTest.java
+/home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/test/java/tech/sgcor/hng/organisation/controller/OrganisationControllerTest.java
+/home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/test/java/tech/sgcor/hng/organisation/repository/OrganisationRepositoryTest.java
+/home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/test/java/tech/sgcor/hng/organisation/service/OrganisationServiceTest.java
+/home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/test/java/tech/sgcor/hng/user/UserIntegrationTest.java
 /home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/test/java/tech/sgcor/hng/user/controller/AuthControllerTest.java
 /home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/test/java/tech/sgcor/hng/user/controller/UserControllerTest.java
 /home/seguser/Lurldgbodex/HNG/web/backend/HNG-Stage-2/src/test/java/tech/sgcor/hng/user/repository/UserRepositoryTest.java
