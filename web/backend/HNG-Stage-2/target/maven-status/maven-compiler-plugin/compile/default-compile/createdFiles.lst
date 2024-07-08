@@ -1,0 +1,16 @@
+tech/sgcor/hng/organisation/dto/response/GetOrganisation.class
+tech/sgcor/hng/organisation/dto/request/AddToOrgRequest.class
+tech/sgcor/hng/organisation/dto/request/CreateOrgRequest.class
+tech/sgcor/hng/organisation/repository/OrganisationRepository.class
+tech/sgcor/hng/organisation/dto/response/OrganisationResponse.class
+tech/sgcor/hng/organisation/dto/response/OrganisationDto.class
+tech/sgcor/hng/organisation/dto/request/CreateOrgRequest$CreateOrgRequestBuilder.class
+tech/sgcor/hng/exception/OrganisationNotFound.class
+tech/sgcor/hng/user/dto/request/CreateUserRequest$CreateUserRequestBuilder.class
+tech/sgcor/hng/organisation/controller/OrganisationController.class
+tech/sgcor/hng/user/dto/request/CreateUserRequest.class
+tech/sgcor/hng/organisation/entity/Organisation$OrganisationBuilder.class
+tech/sgcor/hng/organisation/dto/response/AddToOrgRes.class
+tech/sgcor/hng/organisation/service/OrganisationService.class
+tech/sgcor/hng/organisation/dto/response/OrganisationDto$OrganisationDtoBuilder.class
+tech/sgcor/hng/organisation/entity/Organisation.class

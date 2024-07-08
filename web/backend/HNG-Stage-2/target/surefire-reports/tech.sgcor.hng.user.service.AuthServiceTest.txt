@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: tech.sgcor.hng.user.service.AuthServiceTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.905 s <<< FAILURE! -- in tech.sgcor.hng.user.service.AuthServiceTest
+tech.sgcor.hng.user.service.AuthServiceTest.shouldRegisterUserTest -- Time elapsed: 2.486 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.lang.Long.toString()" because the return value of "tech.sgcor.hng.user.entity.User.getUserId()" is null
+	at tech.sgcor.hng.user.service.AuthService.registerUser(AuthService.java:62)
+	at tech.sgcor.hng.user.service.AuthServiceTest.shouldRegisterUserTest(AuthServiceTest.java:68)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
