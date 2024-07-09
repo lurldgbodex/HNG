@@ -1,25 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:timbu/products/domain/entities/product.dart';
 import 'package:timbu/products/presentation/cubit/product_cubit.dart';
 import 'package:timbu/products/presentation/widgets/product_item.dart';
 
-class ProductScreen extends StatefulWidget {
+class ProductScreen extends StatelessWidget {
   const ProductScreen({super.key});
 
   @override
-  State<ProductScreen> createState() => _ProductScreenState();
-}
-
-class _ProductScreenState extends State<ProductScreen> {
-  @override
-  void initState() {
-    super.initState();
-    context.read<ProductCubit>().fetchProducts();
-  }
-
-  @override
   Widget build(BuildContext context) {
+    context.read<ProductCubit>().fetchProducts();
+
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -28,22 +18,40 @@ class _ProductScreenState extends State<ProductScreen> {
         ),
         centerTitle: true,
       ),
-      body: BlocBuilder<ProductCubit, List<Product>>(
-        builder: (context, products) {
-          if (products.isEmpty) {
+      body: BlocBuilder<ProductCubit, ProductState>(
+        builder: (context, state) {
+          if (state is ProductLoading) {
             return const Center(
               child: CircularProgressIndicator(),
             );
-          }
-          return ListView.builder(
-            itemCount: products.length,
-            itemBuilder: (context, index) {
-              final product = products[index];
-              return ProductItem(
-                product: product,
+          } else if (state is ProductLoaded) {
+            if (state.products.isEmpty) {
+              return const Center(
+                child: Text(
+                  'Not Products available',
+                  style: TextStyle(fontSize: 22.0),
+                ),
               );
-            },
-          );
+            }
+            return ListView.builder(
+              itemCount: state.products.length,
+              itemBuilder: (context, index) {
+                final product = state.products[index];
+                return ProductItem(
+                  product: product,
+                );
+              },
+            );
+          } else if (state is ProductError) {
+            return Center(
+              child: Text(
+                state.message,
+                style: const TextStyle(fontSize: 22.0, color: Colors.red),
+              ),
+            );
+          } else {
+            return Container();
+          }
         },
       ),
       floatingActionButton: FloatingActionButton(

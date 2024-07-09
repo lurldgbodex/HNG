@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import '../../error/server_exception.dart';
 import '../model/product_model.dart';
@@ -15,8 +16,13 @@ class RemoteDataSourceImpl extends RemoteDataSource {
   @override
   Future<List<ProductModel>> getProducts() async {
     try {
-      const urlPath =
-          "https://api.timbu.cloud/products?organization_id=9d03c938e268430faf6888cfe94b157f&reverse_sort=false&page=1&size=10&Appid=YTACWZ0CD39JXRZ&Apikey=30efb4c0d0624be49528357333af305a20240705110431137026";
+      final baseUrl = dotenv.env['BASE_URL'];
+      final appId = dotenv.env['APP_ID'];
+      final apiKey = dotenv.env['API_KEY'];
+      final orgId = dotenv.env['ORG_ID'];
+
+      final urlPath =
+          "$baseUrl/products?organization_id=$orgId&reverse_sort=false&page=1&size=10&Appid=$appId&Apikey=$apiKey";
 
       final response = await dioClient.get(urlPath);
 
@@ -31,7 +37,7 @@ class RemoteDataSourceImpl extends RemoteDataSource {
     } on DioException catch (de) {
       throw ServerException(de.message ?? "Unkwon error");
     } catch (ex) {
-      throw ServerException(ex.toString());
+      throw const ServerException("Something went wrong");
     }
   }
 }

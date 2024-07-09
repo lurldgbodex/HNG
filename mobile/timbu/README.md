@@ -45,7 +45,7 @@ flutter run
 
 ## Download APK
 
-you can download the APK for this application from [here](https://github.com/lurldgbodex/HNG/releases/download/v1.0.5/app-release.apk)
+you can download the APK for this application from [here](https://github.com/lurldgbodex/HNG/releases/download/v1.1.0/app-release.apk)
 
 ## Dependencies
 
@@ -54,3 +54,5 @@ The project uses the following dependencies:
 - `flutter`
 - `Dio`
 - `Flutter_bloc`
+- `Equatable`
+- `Flutter_dotenv`
