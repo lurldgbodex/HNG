@@ -46,6 +46,10 @@ article[data-testid="test-profile-card"]:hover {
   flex-direction: column;
 }
 
+.profile-container figcaption {
+  text-align: center;
+}
+
 @media (min-width: 768px) {
   .profile-container {
     flex-direction: row;
