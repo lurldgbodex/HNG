@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@import "./base.css";
+@import "./components.css";
+@import "./utilities.css";
+
+body {
+  background: #f6f8fb;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
