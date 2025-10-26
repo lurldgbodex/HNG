@@ -35,6 +35,7 @@ import AppHeader from "../components/AppHeader.vue";
 import { createSession } from "../services/session";
 import { useToast } from "../composables/useToast";
 import { useRouter } from "vue-router";
+import { toRefs } from "vue";
 
 export default defineComponent({
   components: { AppHeader },
@@ -48,28 +49,20 @@ export default defineComponent({
     const toast = useToast();
 
     function submit() {
-      console.log("Submitting login form");
       state.errors = {};
-      if (!state.username) {
-        console.log("Username is empty");
-        state.errors.username = "Username required";
-      }
-      if (!state.password) {
-        console.log("Password is empty");
-        state.errors.password = "Password required";
-      }
+      if (!state.username) state.errors.username = "Username required";
+      if (!state.password) state.errors.password = "Password required";
       if (Object.keys(state.errors).length) return;
       if (state.username.trim() && state.password.length >= 4) {
         createSession(state.username.trim());
         toast.push({ type: "success", message: "Signed in successfully" });
         router.push("/dashboard");
       } else {
-        console.log("Invalid credentials");
         toast.push({ type: "error", message: "Invalid credentials" });
       }
     }
 
-    return { ...state, submit };
+    return { ...toRefs(state), submit };
   },
 });
 </script>

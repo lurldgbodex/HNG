@@ -25,7 +25,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from "vue";
+import { defineComponent, reactive, toRefs } from "vue";
 import AppHeader from "../components/AppHeader.vue";
 import { createSession } from "../services/session";
 import { useRouter } from "vue-router";
@@ -51,7 +51,7 @@ export default defineComponent({
       toast.push({ type: "success", message: "Account created" });
       router.push("/dashboard");
     }
-    return { ...state, submit };
+    return { ...toRefs(state), submit };
   },
 });
 </script>
