@@ -1,0 +1,45 @@
+/* components.css */
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    background: #2563eb;
+    color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.12);
+    text-decoration: none;
+    border: none;
+}
+.btn:hover {
+    filter: brightness(0.95);
+}
+.btn-outline {
+    padding: 0.6rem 1rem;
+    border: 2px solid #2563eb;
+    color: #2563eb;
+    border-radius: 0.5rem;
+    background: transparent;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-ghost {
+    background: transparent;
+    border: none;
+    padding: 0.4rem;
+    color: #0f172a;
+    cursor: pointer;
+}
+.input {
+    width: 100%;
+    border: 1px solid #e2e8f0;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+}
+.card {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
+}
+.error {
+    color: #dc2626;
+}

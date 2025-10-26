@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{% block title %}TicketFlow{% endblock %}</title>
+
+  {# CSS files (Tailwind or your own classes). Using simple CSS files below #}
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/utilities.css">
+
+  <style>
+    /* ensure the site container does not exceed 1440px */
+    .site-container { max-width: 1440px; margin-left: auto; margin-right: auto; }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+
+  {% block body %}{% endblock %}
+
+  {# Global JS for auth, tickets, toasts, modals, validation #}
+  <script src="/js/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+/* base.css */
+@media (min-width: 1024px) {
+    /* keep everything centered up to 1440px */
+}
+html,
+body,
+#app {
+    height: 100%;
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial;
+    background: #f6f8fb;
+    color: #0f172a;
+}
+:focus {
+    outline: 3px solid rgba(59, 130, 246, 0.35);
+    outline-offset: 2px;
+}
+.site-container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

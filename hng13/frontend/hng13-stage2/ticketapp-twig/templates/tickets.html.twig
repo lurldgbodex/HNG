@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="min-h-screen flex flex-col">
+  <nav class="bg-white shadow-md py-4 px-6 site-container flex justify-between items-center">
+    <a href="{{ path('app_home') }}" class="text-2xl font-bold text-blue-600">TicketFlow</a>
+    <div>
+      <a id="navDashboard" href="{{ path('app_dashboard') }}" class="mr-4">Dashboard</a>
+      <button id="logoutBtnTop" class="btn-ghost">Logout</button>
+    </div>
+  </nav>
+
+  <main class="flex-1 site-container px-4 py-8">
+    <div class="flex items-center justify-between">
+      <h2 class="text-2xl font-semibold">Tickets</h2>
+      <div>
+        <button id="createTicketBtn" class="btn">Create</button>
+      </div>
+    </div>
+
+    <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="card">
+        <div>Total: <span id="t_total">0</span></div>
+        <div>Open: <span id="t_open">0</span></div>
+        <div>In Progress: <span id="t_in_progress">0</span></div>
+        <div>Closed: <span id="t_closed">0</span></div>
+      </div>
+
+      <div class="md:col-span-2">
+        <div id="ticketsList" class="space-y-4">
+          <!-- ticket cards inserted by JS -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-gray-900 text-gray-300 py-6">
+    <div class="site-container text-center">© {{ 'now'|date('Y') }} TicketFlow</div>
+  </footer>
+</div>
+
+{# Create/Edit modal region (hidden by default) #}
+<div id="modalRoot"></div>
+{% endblock %}

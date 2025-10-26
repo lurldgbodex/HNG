@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="min-h-screen flex flex-col">
+  <nav class="bg-white shadow-md py-4 px-6 site-container flex justify-between items-center">
+    <a href="{{ path('app_home') }}" class="text-2xl font-bold text-blue-600">TicketFlow</a>
+    <div>
+      <a id="navTickets" href="{{ path('app_tickets') }}" class="mr-4">Tickets</a>
+      <button id="logoutBtn" class="btn-ghost">Logout</button>
+    </div>
+  </nav>
+
+  <main class="flex-1 site-container px-4 py-8">
+    <h2 class="text-2xl font-semibold mb-4">Dashboard</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div class="card">
+        <div>Total Tickets</div>
+        <div id="statTotal" class="text-2xl font-bold mt-2">0</div>
+      </div>
+      <div class="card">
+        <div>Open</div>
+        <div id="statOpen" class="text-2xl font-bold mt-2">0</div>
+      </div>
+      <div class="card">
+        <div>Resolved</div>
+        <div id="statClosed" class="text-2xl font-bold mt-2">0</div>
+      </div>
+    </div>
+
+    <div class="mt-6">
+      <a href="{{ path('app_tickets') }}" class="btn">Manage tickets</a>
+    </div>
+  </main>
+
+  <footer class="bg-gray-900 text-gray-300 py-6">
+    <div class="site-container text-center">© {{ 'now'|date('Y') }} TicketFlow</div>
+  </footer>
+</div>
+{% endblock %}
