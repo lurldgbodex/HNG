@@ -1,0 +1,57 @@
+# ------------------------------------------------------
+# 1️⃣ Base image with PHP, Composer, and common extensions
+# ------------------------------------------------------
+FROM php:8.2-apache
+
+# Set working directory
+WORKDIR /var/www/html
+
+# ------------------------------------------------------
+# 2️⃣ Install system dependencies and PHP extensions
+# ------------------------------------------------------
+RUN apt-get update && apt-get install -y \
+    git \
+    unzip \
+    libicu-dev \
+    libpng-dev \
+    libzip-dev \
+    zip \
+    && docker-php-ext-install intl pdo pdo_mysql opcache zip gd \
+    && a2enmod rewrite headers
+
+# ------------------------------------------------------
+# 3️⃣ Copy project files into container
+# ------------------------------------------------------
+COPY . /var/www/html
+
+# ------------------------------------------------------
+# 4️⃣ Install Composer dependencies (production optimized)
+# ------------------------------------------------------
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+RUN composer install --no-dev --optimize-autoloader --no-interaction
+
+# ------------------------------------------------------
+# 5️⃣ Set up Apache configuration
+# ------------------------------------------------------
+RUN echo "<Directory /var/www/html/public>\n\
+    AllowOverride All\n\
+    Require all granted\n\
+</Directory>" > /etc/apache2/conf-available/app.conf && \
+    a2enconf app
+
+# ------------------------------------------------------
+# 6️⃣ Set permissions and environment
+# ------------------------------------------------------
+RUN chown -R www-data:www-data /var/www/html \
+    && chmod -R 755 /var/www/html/var
+
+ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
+ENV APP_ENV=prod
+ENV APP_DEBUG=0
+
+# ------------------------------------------------------
+# 7️⃣ Expose port & start Apache
+# ------------------------------------------------------
+EXPOSE 80
+CMD ["apache2-foreground"]
+

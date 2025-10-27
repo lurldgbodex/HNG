@@ -1,0 +1,10 @@
+node_modules
+vendor
+.git
+.gitignore
+.env.local
+.env.dev
+Dockerfile
+docker-compose.yml
+tests
+
