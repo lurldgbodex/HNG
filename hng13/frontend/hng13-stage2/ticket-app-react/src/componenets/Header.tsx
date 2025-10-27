@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { clearSession, getSession } from "../services/session";
 
 const Header = () => {
@@ -11,8 +11,8 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full border-b bg-white">
-      <div className="max-w[1440px] mx-auto px-4 py-3 flex items-center justify-between">
+    <header className="w-full border-b border-blue-600 bg-white">
+      <div className="max-w-[1440px] mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold">
             T
@@ -22,24 +22,50 @@ const Header = () => {
           </Link>
         </div>
         <nav className="flex items-center gap-4">
-          <Link to="/tickets" className="hidden md:inline-block">
+          <NavLink
+            to="/tickets"
+            className={({ isActive }) =>
+              `hidden md:inline-block font-bold ${
+                isActive ? "text-blue-600" : "text-gray-600 hover:text-blue-500"
+              }`
+            }
+          >
             Tickets
-          </Link>
-          <Link to="/dashboard" className="hidden md:inline-block">
+          </NavLink>
+          <NavLink
+            to="/dashboard"
+            className={({ isActive }) =>
+              `hidden md:inline-block font-bold ${
+                isActive ? "text-blue-600" : "text-gray-600 hover:text-blue-500"
+              }`
+            }
+          >
             Dashboard
-          </Link>
+          </NavLink>
           {session ? (
             <button onClick={handleLogout} className="btn-ghost">
               Logout
             </button>
           ) : (
             <div className="flex gap-2">
-              <Link to="/auth/login" className="btn">
+              <NavLink
+                to="/auth/login"
+                className={({ isActive }) =>
+                  `btn ${isActive ? "bg-blue-600 text-white" : ""}`
+                }
+              >
                 Login
-              </Link>
-              <Link to="/auth/signup" className="btn-outline">
+              </NavLink>
+              <NavLink
+                to="/auth/signup"
+                className={({ isActive }) =>
+                  `btn-outline ${
+                    isActive ? "border-blue-600 text-blue-600" : ""
+                  }`
+                }
+              >
                 Get Started
-              </Link>
+              </NavLink>
             </div>
           )}
         </nav>
