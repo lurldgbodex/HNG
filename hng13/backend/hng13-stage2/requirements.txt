@@ -1,0 +1,9 @@
+fastapi
+pydantic
+uvicorn
+SQLAlchemy
+python-dotenv
+requests
+pillow
+mysql-connector-python
+mangum
