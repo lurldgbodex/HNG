@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/product.dart';
 import '../providers/product_provider.dart';
+import '../themes/theme.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/image_picker_bottom_sheet.dart';
 import '../widgets/product_image.dart';
@@ -92,6 +93,14 @@ class _AddEditScreenState extends ConsumerState<AddEditScreen> {
               const SizedBox(height: 8),
               TextFormField(
                 controller: _nameController,
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Theme.of(context).colorScheme.secondary,
+                      width: 2,
+                    ),
+                  ),
+                ),
                 validator: (v) =>
                     v == null || v.trim().isEmpty ? 'Enter product name' : null,
               ),
@@ -100,6 +109,14 @@ class _AddEditScreenState extends ConsumerState<AddEditScreen> {
               const SizedBox(height: 8),
               TextFormField(
                 controller: _quantityController,
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Theme.of(context).colorScheme.secondary,
+                      width: 2,
+                    ),
+                  ),
+                ),
                 keyboardType: TextInputType.number,
                 validator: (v) => int.tryParse(v ?? '') == null
                     ? 'Enter a valid number'
@@ -110,6 +127,14 @@ class _AddEditScreenState extends ConsumerState<AddEditScreen> {
               const SizedBox(height: 8),
               TextFormField(
                 controller: _priceController,
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Theme.of(context).colorScheme.secondary,
+                      width: 2,
+                    ),
+                  ),
+                ),
                 keyboardType: TextInputType.numberWithOptions(decimal: true),
                 validator: (v) => double.tryParse(v ?? '') == null
                     ? 'Enter a valid price'

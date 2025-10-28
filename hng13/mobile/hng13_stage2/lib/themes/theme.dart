@@ -31,6 +31,7 @@ class AppTheme {
     ),
     inputDecorationTheme: InputDecorationTheme(
       border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+      outlineBorder: BorderSide(color: AppColors.primary),
     ),
   );
 
