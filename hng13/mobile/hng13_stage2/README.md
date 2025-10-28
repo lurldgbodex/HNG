@@ -38,7 +38,7 @@ A simple **inventory management app** that helps storekeepers manage their produ
    ```bash
     flutter run
     ```
-4. **Build the release apk
+4. **Build the release apk**
     ```bash
     fluttter build apk --release
     ```
