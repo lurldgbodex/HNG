@@ -46,10 +46,10 @@ A simple **inventory management app** that helps storekeepers manage their produ
 ---
 ## Links
 ### Download APK
-**[Download the latest release APK here](https://github.com/lurldgbodex/HNG/releases/tag/v2.0.0)
+**[Download the latest release APK here](https://github.com/lurldgbodex/HNG/releases/tag/v2.0.0)**
 
 ## Demo Video
-**[Watch demo video here](https://drive.google.com/file/d/1LYurAj3B_m_ywB79sMDtXY5So7sjH4gS/view?usp=sharing)
+**[Watch demo video here](https://drive.google.com/file/d/1LYurAj3B_m_ywB79sMDtXY5So7sjH4gS/view?usp=sharing)**
 
 ## Appetize link
-**[live app playground](https://appetize.io/app/b_3gqprnj6sau6clb5nvy3ngtv2y)
+**[live app playground](https://appetize.io/app/b_3gqprnj6sau6clb5nvy3ngtv2y)**
