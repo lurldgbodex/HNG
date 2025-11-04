@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Request
 from fastapi.responses import JSONResponse
 from uuid import uuid4
-from models.a2a import (
+from app.models.a2a import (
     JSONRPCRequest, JSONRPCResponse, TaskResult, TaskStatus,
     A2AMessage, MessagePart, Artifact
 )
-from services.study_service import generate_study_response
+from app.services.study_service import generate_study_response
 
 router = APIRouter()
 

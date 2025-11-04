@@ -1,4 +1,4 @@
-from core.config import query_huggingface
+from app.core.config import query_huggingface
 
 async def generate_study_response(topic: str) -> str:
     """

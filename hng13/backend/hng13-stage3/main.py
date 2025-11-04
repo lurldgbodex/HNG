@@ -1,6 +1,9 @@
 import uvicorn
 from fastapi import FastAPI
-from routes import a2a_routes, agent_card_route
+from app.routes import a2a_routes, agent_card_route
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = FastAPI(
     title="Study Buddy Agent",
